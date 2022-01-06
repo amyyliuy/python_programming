@@ -1,4 +1,3 @@
-
 import time
 print()
 print("Welcome to the Quiz Programme !\n")
@@ -215,4 +214,3 @@ time.sleep(0.1)
 print()
 
 print("Well done for completing this quiz ! You got " + str(score) + " / 4.")
-
