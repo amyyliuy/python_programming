@@ -4,20 +4,22 @@ myName = ''
 
 print()
 print("Player 1, please get ready!")
-myName = input("what is your name ?")
-
+myName1 = input("Enter your name, player 1: ")
 
 
 randomNumber = random.randrange(0,100)
-print('Well, ' + myName + ', I am thinking of a number between 1 and 100. You need the minimum number of tries to win!')
+print()
+print('Well, ' + myName1 + ', I am thinking of a number between 1 and 100. You need the minimum number of tries to win!')
+print()
 guessed = False
 count = 0
 
 while guessed is False and count<8:
-    userInput = int(input("Have a guess:"))
+    userInput = int(input("Have a guess: "))
     count += 1
     if userInput == randomNumber:
-        print("You are right! I was thinking of" + str(randomNumber) + "!")
+        print("You are right! I was thinking of " + str(randomNumber) + "!")
+        print()
         guessed = True
         if count==1:
             score=score+10000
@@ -52,8 +54,10 @@ while guessed is False and count<8:
             
     if userInput > randomNumber:
         print(str(userInput) + " is too high.")
+        print()
     if userInput < randomNumber:
         print(str(userInput) + " is too low.")
+        print()
 
 player1 = 0
 player1 = player1 + score
@@ -61,26 +65,29 @@ player1 = player1 + score
 if count==9:
     print("Your guess is incorrect. The right answer is " + str((randomNumber)))
 
-print("your score is " + str(score) + ".")
+print("Your score is " + str(score) + ".")
 
 
 import random
 count = 0
 
 print("Player 2, please get ready!")
-print("What is your name?")
-myName = input()
+print("Enter your name, player 2: ")
+myName2 = input()
 score = 0
 
 randomNumber = random.randrange(0,100)
-print('Well, ' + myName + ', I am thinking of a number between 1 and 100. You have 8 tries to guess it.')
-guessed = False
+print()
+print('Well, ' + myName2 + ', I am thinking of a number between 1 and 100. You have 8 tries to guess it.')
+print()
+guessed = False 
 
 while guessed is False and count<8:
-    userInput = int(input("Have a guess:"))
+    userInput = int(input("Have a guess: "))
+    print()
     count += 1
     if userInput == randomNumber:
-        print("You are right! I was thinking of" + str(randomNumber) + "!")
+        print("You are right! I was thinking of " + str(randomNumber) + "!")
         guessed = True
         if count==1:
             score=score+10000
@@ -114,8 +121,10 @@ while guessed is False and count<8:
             
     if userInput > randomNumber:
         print(str(userInput) + " is too high.")
+        print()
     if userInput < randomNumber:
         print(str(userInput) + " is too low.")
+        print()
         
 player2 = 0
 player2 = player2 + score
@@ -123,13 +132,17 @@ player2 = player2 + score
 
 if count==9:
     print("Your guess is incorrect. The right answer is " + str((randomNumber)))
+    print()
 
 print("Your score is " + str(score) + "." + " We are collecting your scores... " + myName)
+print()
 
 if player1 == player2:
     print("It's a tie!")
     
 if player1 > player2:
-    print("Player 1 wins! Congratulations Player 1!")
+    print(myName1 + " wins! Congratulations!")
+elif player1 == player2:
+    print("TIE!")
 else:
-    print("Player 2 wins! Congratulations Player 2!")
+    print(myName2 + " wins! Congratulations!")
