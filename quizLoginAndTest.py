@@ -3,7 +3,7 @@ print()
 print("Welcome to the Quiz Programme !\n")
 
 age = int(input("Please enter your age \n"))
-#validates if user is old enough to create account
+
 if age <= 16:
     print("Sorry, you are not old enough to create an account. Bye bye !!")
     exit()
@@ -36,10 +36,9 @@ while True:
     else:
         continue
 
-#set 'i' as the number of times the user inputs login details.  
 i = 0
 noofattempts = 3
-#the number of 'i' is less than 3, repeat the process.
+
 login_username = input("Login username. \n")
 login_password = input("Login password. \n")
 
@@ -52,10 +51,7 @@ while i < 3:
     print("Processing......")
     time.sleep(0.5)
     print("Processing..........")
-
-
-#if the login username and password matches, stop the process.
-#if the login username and password do not match, print wrong.
+    
      
     if login_username == username and login_password == password:
         break
@@ -66,8 +62,6 @@ while i < 3:
     if noofattempts == 0:
         print("No attempts left.")
 
-#if less than 3 tries, print login successful
-#otherwise locked out
 
 if i < 3:
     print("Login successful")
